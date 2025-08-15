@@ -1,11 +1,17 @@
-import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+import RoutesDef from './routes.jsx'
 
-const App = () => {
+export default function App() {
   return (
-    <div><h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1></div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1 py-8">
+        <RoutesDef />
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   )
 }
-
-export default App

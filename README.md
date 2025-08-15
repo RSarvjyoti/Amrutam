@@ -254,8 +254,58 @@ Amrutam/
 
 ---
 
-## Notes
+## Client Folder Structure
 
-- All endpoints expect and return JSON.
-- Authentication required for booking appointments and viewing user-specific data.
-- Use the access token in the `Authorization: Bearer <token>` header for protected routes.
+```
+Client/
+├── public/                  # Static assets (images, icons, etc.)
+│   └── vite.svg
+├── src/
+│   ├── api/                 # API service modules (appointments, auth, doctors)
+│   │   ├── appointments.js
+│   │   ├── auth.js
+│   │   └── doctors.js
+│   ├── assets/              # Frontend assets (logos, images)
+│   │   └── react.svg
+│   ├── components/          # Reusable UI components
+│   │   ├── Badge.jsx
+│   │   ├── Button.jsx
+│   │   ├── Card.jsx
+│   │   ├── DateRangePicker.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Input.jsx
+│   │   ├── Navbar.jsx
+│   │   └── Select.jsx
+│   ├── context/             # React context providers
+│   │   └── AuthContext.jsx
+│   ├── features/            # Feature-based modules
+│   │   ├── appointments/
+│   │   │   ├── AppointmentDetail.jsx
+│   │   │   ├── BookFlow.jsx
+│   │   │   ├── MyAppointments.jsx
+│   │   │   └── RescheduleDialog.jsx
+│   │   ├── auth/
+│   │   │   ├── Login.jsx
+│   │   │   └── Signup.jsx
+│   │   ├── availability/
+│   │   │   └── AddAvailability.jsx
+│   │   └── doctors/
+│   │       ├── AddDoctor.jsx
+│   │       ├── DoctorAvailability.jsx
+│   │       └── DoctorsList.jsx
+│   ├── lib/                 # Utility functions and libraries
+│   │   ├── axios.js
+│   │   └── utils.js
+│   ├── App.jsx              # Main App component
+│   ├── index.css            # Global styles
+│   ├── main.jsx             # App entry point
+│   └── routes.jsx           # Route definitions
+├── .env                     # Environment variables
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+```
+
