@@ -113,6 +113,13 @@ Client/
 
 ---
 
+## 🌐 Live Demo
+
+- **Frontend (Vercel):** [https://amrutam.vercel.app/](https://amrutam.vercel.app/)
+- **Backend (Render):** [https://amrutam-bnja.onrender.com](https://amrutam-bnja.onrender.com)
+
+---
+
 ## 📚 More Info
 
 - **Error Handling:** All API errors return a `message` field and appropriate HTTP status codes.
